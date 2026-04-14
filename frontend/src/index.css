@@ -5856,3 +5856,69 @@ h3 {
     padding: 20px 10px 1.5cm 10px !important; /* Significant 1.5cm white space at bottom */
   }
 }
+
+/* Infinite Marquee Animation for Alumni Logos */
+.ticker-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  display: flex !important;
+  position: relative;
+}
+
+.ticker-track {
+  display: flex;
+  animation: tickerScroll 30s linear infinite;
+  width: max-content;
+}
+
+.ticker-track span {
+  padding-right: 30px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+@keyframes tickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause animation on hover */
+.ticker-container:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .ticker-track {
+    animation-duration: 20s; /* Faster scroll on mobile */
+  }
+  .ticker-track span {
+    font-size: 0.72rem !important;
+    padding-right: 15px;
+  }
+}
+
+/* Refining ticker typography */
+.ticker-track span {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.25rem !important; /* Slightly bigger */
+}
+
+@media (max-width: 768px) {
+  .ticker-track span {
+    font-size: 0.9rem !important; /* Bigger for mobile */
+  }
+}
+
+/* Bigger Alumni Label */
+.alumni-label {
+  font-size: 0.95rem !important;
+  letter-spacing: 2px !important;
+  font-weight: 800 !important;
+}
+
+@media (max-width: 768px) {
+  .alumni-label {
+    font-size: 0.75rem !important;
+  }
+}

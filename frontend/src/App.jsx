@@ -1042,8 +1042,11 @@ const App = () => {
 
         <div className="alumni-banner">
           <span className="alumni-label">OUR ALUMNI WORK AT</span>
-          <div className="alumni-logos">
-             Chikusui Canycom Inc &nbsp;|&nbsp; Apple &nbsp;|&nbsp; T. Rowe Price
+          <div className="alumni-logos ticker-container">
+            <div className="ticker-track">
+              <span>Chikusui Canycom Inc &nbsp;|&nbsp; Apple &nbsp;|&nbsp; T. Rowe Price &nbsp;|&nbsp; Japan University of Economics &nbsp;|&nbsp; Déesse Cosmetics of Switzerland &nbsp;|&nbsp;</span>
+              <span>Chikusui Canycom Inc &nbsp;|&nbsp; Apple &nbsp;|&nbsp; T. Rowe Price &nbsp;|&nbsp; Japan University of Economics &nbsp;|&nbsp; Déesse Cosmetics of Switzerland &nbsp;|&nbsp;</span>
+            </div>
           </div>
         </div>
       </section>
