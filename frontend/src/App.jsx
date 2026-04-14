@@ -13,6 +13,14 @@ import japan6 from './assets/ai_images_why_japan/japan_6.png';
 import japan7 from './assets/ai_images_why_japan/japan_7.png';
 import japan8 from './assets/ai_images_why_japan/japan_8.png';
 
+// Explore Japan Images
+import expUrban from './assets/ai_images_explore_japan/urban.png';
+import expFood from './assets/ai_images_explore_japan/food.png';
+import expNature from './assets/ai_images_explore_japan/nature.png';
+import expStudent from './assets/ai_images_explore_japan/student_life.png';
+import expTech from './assets/ai_images_explore_japan/tech.png';
+import expCulture from './assets/ai_images_explore_japan/culture.png';
+
 const Counter = ({ target, duration = 800, suffix = "" }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -372,7 +380,7 @@ const faqsList = [
   { q: "Can I work part-time while studying?", a: "International students are generally allowed to work up to 28 hours per week with a permit, offering great opportunities for cultural immersion." }
 ];
 
-const specialSupportSteps = [
+const specialSupportSteps2 = [
   { id: "visa", title: "Support for Visa and Admission", img: "/images/visa-jue.png" },
   { id: "english", title: "English Friendly Programs", img: "/images/language-jue.jpg" },
   { id: "meals", title: "Indian Meals Available", img: "/images/cafe00.jpg" },
@@ -381,7 +389,7 @@ const specialSupportSteps = [
   { id: "accommodation", title: "Comfortable Accommodation", img: "/images/accommodation-jue.jpg" }
 ];
 
-const supportSlides = {
+const supportSlides2 = {
   "visa": [
     { title: "Direct CoE Guidance", text: "Our International Office provides expert support in securing your Certificate of Eligibility, the first step for your Japanese student visa.", img: "/images/visa-1.png" },
     { title: "Document Preparation", text: "We assist Indian students with all financial and academic documentation required by the Japanese Immigration Services Agency.", img: "/images/visa-2.png" },
@@ -455,6 +463,40 @@ const indianChoiceSteps = [
     icon: "💼"
   }
 ];
+
+const peaceOfMindData = {
+  safety: {
+    title: "Strictly Segregated Dormitories",
+    desc: "Boys and girls are housed in entirely separate, access-controlled buildings. Curfews are monitored, and 24/7 resident wardens ensure complete security. Fukuoka itself consistently ranks as one of the safest cities in the world.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" strokeWidth="2"/>
+        <path d="M8 11V7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7V11" stroke="currentColor" strokeWidth="2"/>
+        <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+      </svg>
+    )
+  },
+  food: {
+    title: "Pure Vegetarian & Halal Options",
+    desc: "We understand dietary needs. Our campus cafeterias offer authentic Indian flavors, including pure vegetarian and halal meals, ensuring students feel right at home while exploring Japanese cuisine.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6Z" stroke="currentColor" strokeWidth="2"/>
+        <path d="M12 8V16M8 12H16" stroke="currentColor" strokeWidth="2"/>
+      </svg>
+    )
+  },
+  health: {
+    title: "24/7 Campus Medical Care",
+    desc: "Your child's health is our priority. With an on-campus clinic and 24/7 emergency support, students have immediate access to healthcare. We also provide comprehensive health insurance for all international students.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2"/>
+        <path d="M12 8V16M8 12H16" stroke="currentColor" strokeWidth="2"/>
+      </svg>
+    )
+  }
+};
 
 const programImages = {
   "Department of Economics": "/images/Undergraduate00.jpg",
@@ -548,6 +590,92 @@ const JapanChoiceCarousel = () => {
           style={{ 
             transform: `translateX(calc(-${idx * 80}%))` 
           }}
+        >
+          {images.map((item, i) => (
+            <div 
+              key={item.title} 
+              className={`japan-carousel-item ${i === idx ? 'curr' : (i < idx ? 'prev' : 'next')}`}
+            >
+              <div className="japan-img-box">
+                <img src={item.img} alt={item.title} />
+              </div>
+              <p className="japan-img-caption">{item.title}</p>
+              <p className="japan-img-desc">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ExploreJapanCarousel = () => {
+  const images = [
+    { 
+      title: "Electric Evenings", 
+      desc: "Dive into the neon-lit energy of Japan''s major cities, where the night brings a futuristic atmosphere and endless discovery.",
+      img: expUrban 
+    },
+    { 
+      title: "Gourmet Adventures", 
+      desc: "Savor the world''s most refined and diverse food scene. From street-side ramen to premium sushi, every meal is a cultural experience.",
+      img: expFood 
+    },
+    { 
+      title: "Pristine Nature", 
+      desc: "Discover the serene beauty of Japan''s seasonal landscapes. Find inspiration in the perfect balance of traditional gardens and majestic mountains.",
+      img: expNature 
+    },
+    { 
+      title: "Global Community", 
+      desc: "Join a melting pot of students from across the globe. Our libraries and social spaces are designed to foster international collaboration.",
+      img: expStudent 
+    },
+    { 
+      title: "Future-Ready Tech", 
+      desc: "Get hands-on with the world''s most advanced technology. Our labs offer students the opportunity to learn in the birthplace of robotics.",
+      img: expTech 
+    },
+    { 
+      title: "Timeless Traditions", 
+      desc: "Experience the soul of Japan through ancient tea ceremonies and local festivals that have been preserved for centuries.",
+      img: expCulture 
+    },
+  ];
+
+  const [idx, setIdx] = React.useState(0);
+  const touchStartX = React.useRef(null);
+
+  const prevSlide = () => {
+    setIdx(prev => (prev - 1 + images.length) % images.length);
+  };
+
+  const nextSlide = () => {
+    setIdx(prev => (prev + 1) % images.length);
+  };
+
+  const handleTouchStart = (e) => touchStartX.current = e.touches[0].clientX;
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    touchStartX.current = null;
+    if (Math.abs(diff) > 50) diff > 0 ? nextSlide() : prevSlide();
+  };
+
+  return (
+    <section 
+      className="japan-choice-section reveal"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      style={{ background: '#f9f9f9' }}
+    >
+      <h2 className="japan-choice-title">
+        <span className="light-blue">Explore Life</span> <br className="mobile-only" /> <span className="navy-blue">at Japan</span>
+      </h2>
+      <div className="japan-carousel-container">
+        <div 
+          className="japan-carousel-track" 
+          style={{ transform: `translateX(calc(-${idx * 80}%))` }}
         >
           {images.map((item, i) => (
             <div 
@@ -708,6 +836,17 @@ const JourneySection = () => {
   );
 };
 
+const comparisonData = [
+  { feature: "Total Cost", jue: "Low / Affordable", other: "Very High" },
+  { feature: "Living Cost", jue: "Moderate", other: "High" },
+  { feature: "Part-Time Jobs", jue: "Up to 28 hrs/week", other: "Usually 20 hrs/week" },
+  { feature: "Work Opportunities After Study", jue: "High demand for skilled foreigners", other: "Competitive job market" },
+  { feature: "Safety Rating", jue: "Among Top Safest Globally", other: "Moderate" },
+  { feature: "Crime Rate", jue: "Very Low", other: "Moderate" },
+  { feature: "Job Placement", jue: "Very High (Strong support)", other: "Depends on university" },
+  { feature: "Placement Support", jue: "Structured & guided", other: "Limited / self-driven" },
+];
+
 const statsSets = [
   [
     { title: "Top Ranked University", value: "Study in Japan's Top Cities: Tokyo, Kobe or Fukuoka" },
@@ -725,13 +864,38 @@ const statsSets = [
 
 const App = () => {
   const [heroIndex, setHeroIndex] = useState(0);
+  const [peaceTab, setPeaceTab] = useState('safety');
   const [selectedProgram, setSelectedProgram] = useState(null);
   const [showStories, setShowStories] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
   const [selectedSupport, setSelectedSupport] = useState("visa");
   const [activeSupportSlide, setActiveSupportSlide] = useState(0);
   const [slideAnim, setSlideAnim] = useState('active');
-  const [isJapanHovered, setIsJapanHovered] = useState(false);
+  const [selectedSupport2, setSelectedSupport2] = useState("visa");
+  const [activeSupportSlide2, setActiveSupportSlide2] = useState(0);
+  const [slideAnim2, setSlideAnim2] = useState('active');
+
+  useEffect(() => {
+    setActiveSupportSlide2(0);
+  }, [selectedSupport2]);
+
+  const nextSupportSlide2 = () => {
+    setSlideAnim2('exit');
+    setTimeout(() => {
+      const slides = supportSlides2[selectedSupport2];
+      setActiveSupportSlide2((prev) => (prev + 1) % slides.length);
+      setSlideAnim2('active');
+    }, 300);
+  };
+
+  const prevSupportSlide2 = () => {
+    setSlideAnim2('exit');
+    setTimeout(() => {
+      const slides = supportSlides2[selectedSupport2];
+      setActiveSupportSlide2((prev) => (prev - 1 + slides.length) % slides.length);
+      setSlideAnim2('active');
+    }, 300);
+  };
 
   useEffect(() => {
     setActiveSupportSlide(0);
@@ -1011,6 +1175,41 @@ const App = () => {
         </div>
       </section>
 
+      {/* Why Choosing Japan Carousel Section [NEW] */}
+      <JapanChoiceCarousel />
+
+      {/* Explore Life at Japan Section [NEW] */}
+      <ExploreJapanCarousel />
+
+      {/* Institutional Comparison Table [NEW] */}
+      <section className="comparison-section reveal">
+        <div className="section-container">
+          <h2 className="comparison-title">
+            <span className="light-blue">Why JUE Japan</span> <br className="mobile-only" /> <span className="navy-blue">is the Smarter Choice</span>
+          </h2>
+          <div className="table-wrapper">
+            <table className="comparison-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>JUE Japan</th>
+                  <th>Other Countries</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonData.map((row, idx) => (
+                  <tr key={idx}>
+                    <td className="row-feature">{row.feature}</td>
+                    <td className="row-jue">{row.jue}</td>
+                    <td className="row-other">{row.other}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {/* A Safe, Welcoming Home Section [NEW] */}
       <section className="safe-home-section reveal">
         <div className="section-container-small">
@@ -1053,11 +1252,157 @@ const App = () => {
       {/* New Journey Section Implementation */}
       <JourneySection />
 
-      {/* Why Choose JUE Section [NEW] */}
-      <WhyChooseSection />
+      {/* Special Support for Indian Students Section 2 [REDESIGNED] */}
+      <section className="special-support-section2 reveal" id="special-support2">
+        <div className="special-support-header2">
+          <h2 className="special-support-line1">Special Support for</h2>
+          <h2 className="special-support-line2">Indian Students</h2>
+        </div>
+        <div className="support-grid-rows2">
+          {[0, 1, 2].map((rowIdx) => {
+            const rowItems = specialSupportSteps2.slice(rowIdx * 2, rowIdx * 2 + 2);
+            const isRowActive = rowItems.some(item => item.id === selectedSupport2);
+            
+            return (
+              <React.Fragment key={rowIdx}>
+                <div className="support-row-pair2">
+                  {rowItems.map((step) => (
+                    <div 
+                      key={step.id} 
+                      className={`support-card2 ${selectedSupport2 === step.id ? 'active-card-support2' : ''}`}
+                      onClick={() => {
+                        if (selectedSupport2 === step.id) {
+                          setSelectedSupport2(null);
+                        } else {
+                          setSelectedSupport2(step.id);
+                        }
+                      }}
+                    >
+                      <div className="support-img-box2">
+                        <img src={step.img} alt={step.title} />
+                      </div>
+                      <div className="support-info-box2">
+                        <p>{step.title}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
-      {/* Why Choosing Japan Carousel Section [NEW] */}
-      <JapanChoiceCarousel />
+                {/* Inline Slider for this Row */}
+                <div className={`row-slider-wrapper2 ${isRowActive ? 'expanded' : ''}`}>
+                  {isRowActive && selectedSupport2 && supportSlides2[selectedSupport2] && (
+                    <div className="about-program-container2 inline-slider2">
+                      <div className="about-program-slider2 sub-carousel-container2">
+                        <div className="support-detail-layout2">
+                          <div className="image-carousel-unit2">
+                            <div className="sub-arrow-container2">
+                              <button className="sub-arrow2 left" onClick={prevSupportSlide2}>‹</button>
+                              <div className={`about-program-image2 sub-image2 ${slideAnim2}`}>
+                                <img src={supportSlides2[selectedSupport2][activeSupportSlide2].img} alt="Support" />
+                              </div>
+                              <button className="sub-arrow2 right" onClick={nextSupportSlide2}>›</button>
+                            </div>
+                            <div className="slide-dots-image-align2">
+                               {supportSlides2[selectedSupport2].map((_, i) => (
+                                 <span key={i} className={`slide-dot2 ${i === activeSupportSlide2 ? 'active' : ''}`}></span>
+                               ))}
+                            </div>
+                          </div>
+                          
+                          <div className={`about-program-info2 sub-info2 ${slideAnim2}`}>
+                            <h2 className="about-program-title2">{supportSlides2[selectedSupport2][activeSupportSlide2].title}</h2>
+                            <div className="about-program-underline2"></div>
+                            <p className="about-program-text2">
+                              {supportSlides2[selectedSupport2][activeSupportSlide2].text}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </React.Fragment>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Total Peace of Mind Section [NEW] */}
+      <section className="peace-of-mind reveal">
+        <div className="section-container-small">
+          <div className="peace-header">
+            <span className="peace-badge">FOR FAMILIES</span>
+            <h2 className="peace-main-title">Total Peace of Mind</h2>
+            <p className="peace-subtitle">
+              We understand sending your child abroad is daunting. JUE eliminates the risks.
+            </p>
+          </div>
+
+          <div className="peace-tabs">
+            <button 
+              className={`peace-tab-btn ${peaceTab === 'safety' ? 'active' : ''}`}
+              onClick={() => setPeaceTab('safety')}
+            >
+              Safety & Housing
+            </button>
+            <button 
+              className={`peace-tab-btn ${peaceTab === 'food' ? 'active' : ''}`}
+              onClick={() => setPeaceTab('food')}
+            >
+              Food & Culture
+            </button>
+            <button 
+              className={`peace-tab-btn ${peaceTab === 'health' ? 'active' : ''}`}
+              onClick={() => setPeaceTab('health')}
+            >
+              Health & Support
+            </button>
+          </div>
+
+          <div className="peace-content-card">
+            <div className="peace-icon-wrapper">
+              {peaceOfMindData[peaceTab].icon}
+            </div>
+            <h3 className="peace-card-title">{peaceOfMindData[peaceTab].title}</h3>
+            <p className="peace-card-desc">{peaceOfMindData[peaceTab].desc}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Earn While You Learn Section [NEW] */}
+      <section className="earn-while-learn reveal">
+        <div className="yellow-strip top" />
+        <div className="section-container-small">
+          
+          {/* Box 1: Earn While You Learn */}
+          <div className="earn-info-box">
+            <h2 className="box-title">Earn While You Learn</h2>
+            <p className="box-text">
+              Under Japanese law, international students can work 28 hours per week. 
+              Earn up to <strong>₹60,000/month</strong> to easily cover your living expenses.
+            </p>
+          </div>
+
+          {/* Box 2: The Journey */}
+          <div className="journey-info-box">
+            <h2 className="box-title highlight">The "Zero to N1" Journey</h2>
+            <p className="box-text">
+              Don''t know Japanese? No problem. Our mandatory language integration program takes you from complete beginner to business-fluent (JLPT N1/N2) alongside your degree.
+            </p>
+            
+            <div className="journey-box-divider"></div>
+            
+            <div className="journey-timeline-simple">
+              <span className="year-mark">YEAR 1 : <span className="status-mark">BEGINNER</span></span>
+              <span className="year-mark">YEAR 4 : <span className="status-mark">N1 BUSINESS FLUENT</span></span>
+            </div>
+          </div>
+
+        </div>
+        <div className="yellow-strip bottom" />
+      </section>
+
+
 
 
 
