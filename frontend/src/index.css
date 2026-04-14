@@ -5647,3 +5647,212 @@ h3 {
     max-width: 100%;
   }
 }
+
+/* =========================================
+   Uniform 1cm Section Spacing (Mobile)
+   ========================================= */
+@media (max-width: 768px) {
+  section,
+  .news-press-section,
+  .highlights-jue-section,
+  .journey-wrapper,
+  .special-support-section2,
+  .peace-of-mind,
+  .earn-while-learn,
+  .alumni-inspiration-section,
+  .success-stories,
+  .whatsapp-cta-section,
+  .faq,
+  .apply-cta,
+  .safe-home-section,
+  .japan-choice-section,
+  .indian-students-choice-section,
+  .comparison-section,
+  .indian-welcome {
+    padding-top: 0 !important;
+    padding-bottom: 1cm !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Specific overrides for sections that need small top padding for headings */
+  .special-support-section2,
+  .peace-of-mind,
+  .earn-while-learn,
+  .faq {
+    padding-top: 0.5cm !important; /* Slight top space for visual balance */
+    padding-bottom: 0.5cm !important; /* Total gap remains 1cm when between two sections */
+  }
+  
+  .thick-section-divider {
+    height: 1cm !important;
+    background: transparent !important;
+    margin: 0 !important;
+  }
+}
+
+/* =========================================
+   Uniform Heading Styles (Mobile)
+   ========================================= */
+@media (max-width: 768px) {
+  .choice-title,
+  .japan-choice-title,
+  .comparison-title,
+  .news-title,
+  .highlights-jue-section h2,
+  .journey-header h2,
+  .special-support-line1,
+  .special-support-line2,
+  .peace-main-title,
+  .faq-header-strip h2,
+  .apply-cta h2 {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.35rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 20px !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+    padding-left: 0 !important;
+  }
+
+  /* Special handling for two-part headings to keep them together */
+  .special-support-line1, .special-support-line2 {
+    margin-bottom: 0 !important;
+  }
+  .special-support-line2 {
+    margin-bottom: 10px !important;
+  }
+}
+
+/* Corrections for Why Choice Header (Mobile) */
+@media (max-width: 768px) {
+  .choice-eyebrow,
+  .choice-title {
+    font-size: 1.35rem !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+  .choice-header {
+    margin-bottom: 25px !important;
+  }
+}
+
+/* Refining Accordion Strips and Spacing (Mobile) */
+@media (max-width: 768px) {
+  .accordion-header-strip {
+    padding: 2px 12px !important; /* Extremely thin */
+  }
+  .accordion-stripe {
+    padding: 4px 10px 4px 30px !important; /* Thinner accordion items */
+  }
+  .indian-students-choice-section {
+    padding-top: 1cm !important; /* 1cm space above this section */
+  }
+}
+
+/* Refining Safe Home Section Spacing (Mobile) */
+@media (max-width: 768px) {
+  .safe-home-section {
+    padding-bottom: 5px !important; /* Extremely reduced bottom */
+  }
+  .news-press-section {
+    padding-top: 1cm !important; /* Precise 1cm space above News section */
+  }
+}
+
+/* Tighter Grid Spacing for Special Support (Mobile) */
+@media (max-width: 768px) {
+  .support-grid-rows2 {
+    gap: 10px !important; /* Reduced vertical gap between card rows */
+  }
+  .support-row-pair2 {
+    gap: 10px !important; /* Reduced gap between side-by-side cards */
+  }
+}
+
+/* Applying Light Background to Journey Section */
+.journey-wrapper {
+  background-color: #f8f9fa !important;
+}
+
+/* Applying Light Background to Peace of Mind Section */
+.peace-of-mind {
+  background-color: #f8f9fa !important;
+}
+
+/* Vertical Spacing between Earn Section and Concerns Section */
+@media (max-width: 768px) {
+  .community-cta {
+    margin-top: 1cm !important; /* Precision 1cm gap */
+    padding-bottom: 5px !important;
+  }
+}
+
+/* Making WhatsApp CTA Smaller (Mobile) */
+@media (max-width: 768px) {
+  .whatsapp-cta-section {
+    padding: 8px 15px !important;
+  }
+  .whatsapp-cta-text {
+    font-size: 0.85rem !important;
+  }
+  .whatsapp-join-btn {
+    font-size: 0.72rem !important;
+    padding: 4px 15px !important;
+  }
+  .whatsapp-cta-banner {
+    gap: 10px !important;
+  }
+}
+
+/* Center Align Peace of Mind Title (Mobile) */
+@media (max-width: 768px) {
+  .peace-main-title {
+    text-align: center !important;
+  }
+}
+
+/* Ensuring All Accordion Strips are Equal and Compact (Mobile) */
+@media (max-width: 768px) {
+  .stripe-title {
+    font-size: 0.85rem !important;
+    line-height: 1.2 !important;
+    display: block !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 85% !important;
+  }
+  .accordion-stripe {
+    min-height: 35px !important;
+    height: 35px !important;
+    padding: 0 10px 0 30px !important;
+  }
+}
+
+/* Removing potential extra strip at the bottom of Programs section (Mobile) */
+@media (max-width: 768px) {
+  .programs-accordion-section {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+  .accordion-wrapper {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .accordion-items {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Increasing whitespace after Video and before Programs (Mobile) */
+@media (max-width: 768px) {
+  .welcome-jue {
+    padding: 20px 10px 1.5cm 10px !important; /* Significant 1.5cm white space at bottom */
+  }
+}

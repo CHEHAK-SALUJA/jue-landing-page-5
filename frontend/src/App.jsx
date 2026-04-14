@@ -333,10 +333,10 @@ const HighlightCarousel = () => {
 };
 
 const heroSliderImages = [
-  '/images/football_play.jpeg',
+  // '/images/football_play.jpeg',
   '/images/hero.png',
   // '/images/graduate00.jpg',
-  '/images/LearningProgression01.jpg',
+  // '/images/LearningProgression01.jpg',
   // '/images/support04.jpg',
   // '/images/Undergraduate00.jpg',
   // '/images/why-jue.jpg'
@@ -983,11 +983,7 @@ const App = () => {
         </div>
       </header>
  
-      {/* Hero Tagline Strip [NEW] */}
-      <div className="hero-tagline-strip">
-        Dreaming of studying in Japan is now easier and more affordable with Japan University of Economics (JUE).
-      </div>
-
+ 
       {/* Hero Section */}
       <section className="hero" id="home">
         {/* Sliding background images */}
