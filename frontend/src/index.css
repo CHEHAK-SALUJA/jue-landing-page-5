@@ -6148,3 +6148,34 @@ h3 {
     padding-top: 1cm !important; /* Precision 1cm whitespace */
   }
 }
+
+/* Social Icon Image Styling */
+.social-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Make logos white to match premium dark footer */
+  transition: var(--transition);
+}
+
+.social-icon:hover img {
+  filter: brightness(1) invert(0); /* Original colors on hover */
+  transform: scale(1.1);
+}
+
+/* Enhanced Social Icon Styling */
+.social-icon {
+  background: white !important; /* White background for visibility */
+  overflow: hidden;
+}
+
+.social-icon img {
+  width: 24px !important;
+  height: 24px !important;
+  filter: none !important; /* Original brand colors */
+}
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.1) !important;
+  box-shadow: 0 5px 15px rgba(218, 165, 32, 0.4) !important;
+}

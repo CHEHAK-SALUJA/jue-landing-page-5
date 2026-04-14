@@ -21,6 +21,13 @@ import expStudent from './assets/ai_images_explore_japan/student_life.png';
 import expTech from './assets/ai_images_explore_japan/tech.png';
 import expCulture from './assets/ai_images_explore_japan/culture.png';
 
+// Social Logos
+import fbLogo from './assets/logos/Facebook_logo.png';
+import igLogo from './assets/logos/Instagram_logo.png';
+// import lnLogo from './assets/logos/Line_logo.png';
+import ytLogo from './assets/logos/Youtube_logo.png';
+import liLogo from './assets/logos/linkedIn_logo.png';
+
 const Counter = ({ target, duration = 800, suffix = "" }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -470,9 +477,9 @@ const peaceOfMindData = {
     desc: "Boys and girls are housed in entirely separate, access-controlled buildings. Curfews are monitored, and 24/7 resident wardens ensure complete security. Fukuoka itself consistently ranks as one of the safest cities in the world.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" strokeWidth="2"/>
-        <path d="M8 11V7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7V11" stroke="currentColor" strokeWidth="2"/>
-        <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+        <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" strokeWidth="2" />
+        <path d="M8 11V7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7V11" stroke="currentColor" strokeWidth="2" />
+        <circle cx="12" cy="16" r="1.5" fill="currentColor" />
       </svg>
     )
   },
@@ -481,8 +488,8 @@ const peaceOfMindData = {
     desc: "We understand dietary needs. Our campus cafeterias offer authentic Indian flavors, including pure vegetarian and halal meals, ensuring students feel right at home while exploring Japanese cuisine.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6Z" stroke="currentColor" strokeWidth="2"/>
-        <path d="M12 8V16M8 12H16" stroke="currentColor" strokeWidth="2"/>
+        <path d="M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6Z" stroke="currentColor" strokeWidth="2" />
+        <path d="M12 8V16M8 12H16" stroke="currentColor" strokeWidth="2" />
       </svg>
     )
   },
@@ -491,8 +498,8 @@ const peaceOfMindData = {
     desc: "Your child's health is our priority. With an on-campus clinic and 24/7 emergency support, students have immediate access to healthcare. We also provide comprehensive health insurance for all international students.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2"/>
-        <path d="M12 8V16M8 12H16" stroke="currentColor" strokeWidth="2"/>
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" />
+        <path d="M12 8V16M8 12H16" stroke="currentColor" strokeWidth="2" />
       </svg>
     )
   }
@@ -508,45 +515,45 @@ const programImages = {
 
 const JapanChoiceCarousel = () => {
   const images = [
-    { 
-      title: "World-Class Safety", 
+    {
+      title: "World-Class Safety",
       desc: "Experience one of the safest countries globally, where you can move freely with peace of mind. Japan's low crime rate and secure environment make it perfect for international students.",
-      img: japan1 
+      img: japan1
     },
-    { 
-      title: "Stunning Natural Seasons", 
+    {
+      title: "Stunning Natural Seasons",
       desc: "From cherry blossoms in spring to golden leaves in autumn, Japan's four distinct seasons offer breathtaking views and a unique connection to nature throughout the year.",
-      img: japan2 
+      img: japan2
     },
-    { 
-      title: "Cutting-Edge Technology", 
+    {
+      title: "Cutting-Edge Technology",
       desc: "Be at the forefront of global innovation. Study in a nation that leads the world in robotics and high-speed transportation systems like the Shinkansen.",
-      img: japan3 
+      img: japan3
     },
-    { 
-      title: "Traditional Culture", 
+    {
+      title: "Traditional Culture",
       desc: "Discover a harmonious blend of the old and new. Explore ancient shrines and participate in traditional ceremonies in a culture that deeply respects its rich history.",
-      img: japan4 
+      img: japan4
     },
-    { 
-      title: "Authentic Culinary Delights", 
+    {
+      title: "Authentic Culinary Delights",
       desc: "Enjoy a world-renowned food culture. From high-end sushi to affordable local ramen, Japan's cuisine is as diverse and high-quality as its education system.",
-      img: japan5 
+      img: japan5
     },
-    { 
-      title: "24/7 Convenience", 
+    {
+      title: "24/7 Convenience",
       desc: "Life made easy with convenience stores on every corner and efficient services. Everything you need is accessible anytime, letting you focus on your studies.",
-      img: japan6 
+      img: japan6
     },
-    { 
-      title: "Leading Education & Research", 
+    {
+      title: "Leading Education & Research",
       desc: "Enroll in world-class institutions known for academic rigour. JUE provides the tools and network needed to excel in the global and domestic market.",
-      img: japan7 
+      img: japan7
     },
-    { 
-      title: "Vibrant City Life", 
+    {
+      title: "Vibrant City Life",
       desc: "Live in dynamic urban centers like Tokyo or Fukuoka. Enjoy endless entertainment, shopping, and networking opportunities in some of the world's most modern cities.",
-      img: japan8 
+      img: japan8
     },
   ];
 
@@ -576,7 +583,7 @@ const JapanChoiceCarousel = () => {
   };
 
   return (
-    <section 
+    <section
       className="japan-choice-section reveal"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
@@ -585,15 +592,15 @@ const JapanChoiceCarousel = () => {
         <span className="light-blue">Why Choosing</span> <br className="mobile-only" /> <span className="navy-blue">JAPAN is the Right Choice</span>
       </h2>
       <div className="japan-carousel-container">
-        <div 
-          className="japan-carousel-track" 
-          style={{ 
-            transform: `translateX(calc(-${idx * 80}%))` 
+        <div
+          className="japan-carousel-track"
+          style={{
+            transform: `translateX(calc(-${idx * 80}%))`
           }}
         >
           {images.map((item, i) => (
-            <div 
-              key={item.title} 
+            <div
+              key={item.title}
               className={`japan-carousel-item ${i === idx ? 'curr' : (i < idx ? 'prev' : 'next')}`}
             >
               <div className="japan-img-box">
@@ -611,35 +618,35 @@ const JapanChoiceCarousel = () => {
 
 const ExploreJapanCarousel = () => {
   const images = [
-    { 
-      title: "Electric Evenings", 
+    {
+      title: "Electric Evenings",
       desc: "Dive into the neon-lit energy of Japan''s major cities, where the night brings a futuristic atmosphere and endless discovery.",
-      img: expUrban 
+      img: expUrban
     },
-    { 
-      title: "Gourmet Adventures", 
+    {
+      title: "Gourmet Adventures",
       desc: "Savor the world''s most refined and diverse food scene. From street-side ramen to premium sushi, every meal is a cultural experience.",
-      img: expFood 
+      img: expFood
     },
-    { 
-      title: "Pristine Nature", 
+    {
+      title: "Pristine Nature",
       desc: "Discover the serene beauty of Japan''s seasonal landscapes. Find inspiration in the perfect balance of traditional gardens and majestic mountains.",
-      img: expNature 
+      img: expNature
     },
-    { 
-      title: "Global Community", 
+    {
+      title: "Global Community",
       desc: "Join a melting pot of students from across the globe. Our libraries and social spaces are designed to foster international collaboration.",
-      img: expStudent 
+      img: expStudent
     },
-    { 
-      title: "Future-Ready Tech", 
+    {
+      title: "Future-Ready Tech",
       desc: "Get hands-on with the world''s most advanced technology. Our labs offer students the opportunity to learn in the birthplace of robotics.",
-      img: expTech 
+      img: expTech
     },
-    { 
-      title: "Timeless Traditions", 
+    {
+      title: "Timeless Traditions",
       desc: "Experience the soul of Japan through ancient tea ceremonies and local festivals that have been preserved for centuries.",
-      img: expCulture 
+      img: expCulture
     },
   ];
 
@@ -663,7 +670,7 @@ const ExploreJapanCarousel = () => {
   };
 
   return (
-    <section 
+    <section
       className="japan-choice-section reveal"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
@@ -673,13 +680,13 @@ const ExploreJapanCarousel = () => {
         <span className="light-blue">Explore Life</span> <br className="mobile-only" /> <span className="navy-blue">at Japan</span>
       </h2>
       <div className="japan-carousel-container">
-        <div 
-          className="japan-carousel-track" 
+        <div
+          className="japan-carousel-track"
           style={{ transform: `translateX(calc(-${idx * 80}%))` }}
         >
           {images.map((item, i) => (
-            <div 
-              key={item.title} 
+            <div
+              key={item.title}
               className={`japan-carousel-item ${i === idx ? 'curr' : (i < idx ? 'prev' : 'next')}`}
             >
               <div className="japan-img-box">
@@ -739,7 +746,7 @@ const JourneySection = () => {
       if (entry.isIntersecting && window.scrollY > 100) {
         setIsActive(true);
       }
-    }, { threshold: 0.5 }); 
+    }, { threshold: 0.5 });
 
     observer.observe(section);
     return () => observer.disconnect();
@@ -772,64 +779,64 @@ const JourneySection = () => {
 
         <svg className="journey-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
           {/* Animated Dotted Line */}
-          <path 
+          <path
             id="flight-path"
-            d={pathData} 
-            fill="none" 
-            stroke="#003B6F" 
-            strokeWidth="0.4" 
-            strokeDasharray="1.5, 1.5" 
+            d={pathData}
+            fill="none"
+            stroke="#003B6F"
+            strokeWidth="0.4"
+            strokeDasharray="1.5, 1.5"
             vectorEffect="non-scaling-stroke"
           />
           {/* Fixed Horizontal SVG Airplane animating over exact path - Stopping at end & Bigger size */}
-          <image 
-            href="/images/airplane-removebg-preview.png" 
-            width="20" 
-            height="20" 
-            x="-10" 
-            y="-10" 
+          <image
+            href="/images/airplane-removebg-preview.png"
+            width="20"
+            height="20"
+            x="-10"
+            y="-10"
             transform="rotate(30)"
             style={{ opacity: isActive ? 1 : 0, transition: 'opacity 0.5s ease-in' }}
           >
-             <animateMotion 
-               ref={animRef}
-               dur="12s" 
-               repeatCount="1" 
-               fill="freeze" 
-               path={pathData} 
-               begin="indefinite"
-             />
+            <animateMotion
+              ref={animRef}
+              dur="12s"
+              repeatCount="1"
+              fill="freeze"
+              path={pathData}
+              begin="indefinite"
+            />
           </image>
         </svg>
 
         {/* Dynamic Markers mathematically guaranteed to fall perfectly on the SVG cubic bezier path */}
         {journeySteps.map((step, idx) => {
-           const x = getBezierPoint(step.t, 20, 80, 20, 80);
-           const y = getBezierPoint(step.t, 85, 85, 15, 15);
-           const dotColor = step.color === 'green' ? '#2ecc71' : '#3498db';
+          const x = getBezierPoint(step.t, 20, 80, 20, 80);
+          const y = getBezierPoint(step.t, 85, 85, 15, 15);
+          const dotColor = step.color === 'green' ? '#2ecc71' : '#3498db';
 
-            return (
-              <div 
-                key={idx} 
-                className="journey-marker" 
-                style={{ 
-                  left: `${x}%`, 
-                  top: `${y}%`, 
-                  borderColor: dotColor
+          return (
+            <div
+              key={idx}
+              className="journey-marker"
+              style={{
+                left: `${x}%`,
+                top: `${y}%`,
+                borderColor: dotColor
+              }}
+            >
+              <div
+                className={`step-text-container ${step.align} ${isActive ? 'fade-in-on-pass' : ''}`}
+                style={{
+                  animationDelay: `${step.t * 12}s`, // Adjusted to match 12s airplane duration
+                  opacity: 0 // Start hidden
                 }}
               >
-                <div 
-                  className={`step-text-container ${step.align} ${isActive ? 'fade-in-on-pass' : ''}`}
-                  style={{ 
-                    animationDelay: `${step.t * 12}s`, // Adjusted to match 12s airplane duration
-                    opacity: 0 // Start hidden
-                  }}
-                >
-                  <div className="step-title" style={{ color: dotColor }}>{step.title}</div>
-                  <div className="step-sub">{step.sub}</div>
-                </div>
+                <div className="step-title" style={{ color: dotColor }}>{step.title}</div>
+                <div className="step-sub">{step.sub}</div>
               </div>
-            );
+            </div>
+          );
         })}
       </div>
     </section>
@@ -918,7 +925,7 @@ const App = () => {
       setSlideAnim('active');
     }, 300);
   };
-  
+
   const [statSetIndex, setStatSetIndex] = useState(0);
   const [statAnim, setStatAnim] = useState('active');
   const [isStatsPaused, setIsStatsPaused] = useState(false);
@@ -933,8 +940,8 @@ const App = () => {
         setStatAnim('slide-in');
         setTimeout(() => {
           setStatAnim('active');
-        }, 100); 
-      }, 500); 
+        }, 100);
+      }, 500);
     }, 4000); // 4 seconds interval
 
     return () => clearInterval(statsTimer);
@@ -982,8 +989,8 @@ const App = () => {
           </nav>
         </div>
       </header>
- 
- 
+
+
       {/* Hero Section */}
       <section className="hero" id="home">
         {/* Sliding background images */}
@@ -1067,7 +1074,7 @@ const App = () => {
       </section>
 
       {/* Navy Stats Section [NEW] */}
-      <section 
+      <section
         className="navy-stats reveal"
         onMouseEnter={() => setIsStatsPaused(true)}
         onMouseLeave={() => setIsStatsPaused(false)}
@@ -1081,7 +1088,7 @@ const App = () => {
                 <div className={`stats-slider-wrapper ${statAnim}`}>
                   <h3 className="block-title">{stat.title}</h3>
                   <div className="stat-detail">
-                    
+
                     <span className="stat-value">{stat.value}</span>
                   </div>
                 </div>
@@ -1119,22 +1126,22 @@ const App = () => {
 
           <div className="accordion-items">
             {Object.keys(programDetails).map((prog) => (
-              <div 
-                key={prog} 
+              <div
+                key={prog}
                 className={`accordion-item ${selectedProgram === prog ? 'expanded' : ''}`}
               >
-                <div 
-                  className="accordion-stripe" 
+                <div
+                  className="accordion-stripe"
                   onClick={() => setSelectedProgram(selectedProgram === prog ? null : prog)}
                 >
                   <span className="stripe-title">{prog}</span>
                   <span className="stripe-icon">{selectedProgram === prog ? '−' : '+'}</span>
                 </div>
-                
+
                 <div className="accordion-content">
                   <div className="content-inner">
                     <p className="program-desc">{programDetails[prog]}</p>
-                    <button 
+                    <button
                       className="learn-more-btn"
                       onClick={() => window.open('#', '_blank')}
                     >
@@ -1155,13 +1162,13 @@ const App = () => {
             <h3 className="choice-eyebrow">Why Indian Students Choose</h3>
             <h2 className="choice-title">Japan University of Economics?</h2>
           </div>
-          
+
           <div className="choice-cards-container">
             {indianChoiceSteps.map((step, index) => (
               <div key={index} className="choice-card-item">
                 <div className="choice-icon-box">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 7H16V5C16 3.89543 15.1046 3 14 3H10C8.89543 3 8 3.89543 8 5V7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7ZM10 5H14V7H10V5ZM20 19H4V9H20V19Z" fill="#111"/>
+                    <path d="M20 7H16V5C16 3.89543 15.1046 3 14 3H10C8.89543 3 8 3.89543 8 5V7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7ZM10 5H14V7H10V5ZM20 19H4V9H20V19Z" fill="#111" />
                   </svg>
                 </div>
                 <div className="choice-content">
@@ -1216,7 +1223,7 @@ const App = () => {
           <p className="safe-home-intro">
             We offer a safe, welcoming, and supportive environment that understands the needs of Indian students and their families.
           </p>
-          
+
           <div className="safe-home-checklist">
             <div className="checklist-item">
               <span className="check-icon">✓</span>
@@ -1227,9 +1234,9 @@ const App = () => {
               <p><strong>Mentor Support System:</strong> Dedicated mentor support to guide students academically and personally throughout their journey.</p>
             </div>
           </div>
-          
 
-          
+
+
           <button className="explore-campus-btn">Explore Campus Life</button>
         </div>
       </section>
@@ -1261,13 +1268,13 @@ const App = () => {
           {[0, 1, 2].map((rowIdx) => {
             const rowItems = specialSupportSteps2.slice(rowIdx * 2, rowIdx * 2 + 2);
             const isRowActive = rowItems.some(item => item.id === selectedSupport2);
-            
+
             return (
               <React.Fragment key={rowIdx}>
                 <div className="support-row-pair2">
                   {rowItems.map((step) => (
-                    <div 
-                      key={step.id} 
+                    <div
+                      key={step.id}
                       className={`support-card2 ${selectedSupport2 === step.id ? 'active-card-support2' : ''}`}
                       onClick={() => {
                         if (selectedSupport2 === step.id) {
@@ -1302,12 +1309,12 @@ const App = () => {
                               <button className="sub-arrow2 right" onClick={nextSupportSlide2}>›</button>
                             </div>
                             <div className="slide-dots-image-align2">
-                               {supportSlides2[selectedSupport2].map((_, i) => (
-                                 <span key={i} className={`slide-dot2 ${i === activeSupportSlide2 ? 'active' : ''}`}></span>
-                               ))}
+                              {supportSlides2[selectedSupport2].map((_, i) => (
+                                <span key={i} className={`slide-dot2 ${i === activeSupportSlide2 ? 'active' : ''}`}></span>
+                              ))}
                             </div>
                           </div>
-                          
+
                           <div className={`about-program-info2 sub-info2 ${slideAnim2}`}>
                             <h2 className="about-program-title2">{supportSlides2[selectedSupport2][activeSupportSlide2].title}</h2>
                             <div className="about-program-underline2"></div>
@@ -1338,19 +1345,19 @@ const App = () => {
           </div>
 
           <div className="peace-tabs">
-            <button 
+            <button
               className={`peace-tab-btn ${peaceTab === 'safety' ? 'active' : ''}`}
               onClick={() => setPeaceTab('safety')}
             >
               Safety & Housing
             </button>
-            <button 
+            <button
               className={`peace-tab-btn ${peaceTab === 'food' ? 'active' : ''}`}
               onClick={() => setPeaceTab('food')}
             >
               Food & Culture
             </button>
-            <button 
+            <button
               className={`peace-tab-btn ${peaceTab === 'health' ? 'active' : ''}`}
               onClick={() => setPeaceTab('health')}
             >
@@ -1372,12 +1379,12 @@ const App = () => {
       <section className="earn-while-learn reveal">
         <div className="yellow-strip top" />
         <div className="section-container-small">
-          
+
           {/* Box 1: Earn While You Learn */}
           <div className="earn-info-box">
             <h2 className="box-title">Earn While You Learn</h2>
             <p className="box-text">
-              Under Japanese law, international students can work 28 hours per week. 
+              Under Japanese law, international students can work 28 hours per week.
               Earn up to <strong>₹60,000/month</strong> to easily cover your living expenses.
             </p>
           </div>
@@ -1388,9 +1395,9 @@ const App = () => {
             <p className="box-text">
               Don''t know Japanese? No problem. Our mandatory language integration program takes you from complete beginner to business-fluent (JLPT N1/N2) alongside your degree.
             </p>
-            
+
             <div className="journey-box-divider"></div>
-            
+
             <div className="journey-timeline-simple">
               <span className="year-mark">YEAR 1 : <span className="status-mark">BEGINNER</span></span>
               <span className="year-mark">YEAR 4 : <span className="status-mark">N1 BUSINESS FLUENT</span></span>
@@ -1427,8 +1434,8 @@ const App = () => {
           <p className="alumni-subtitle">
             Discover how Education In JAPAN can give you unique opportunities for personal<br className="desktop-break" /> growth and career success.
           </p>
-          <button 
-            className={`alumni-btn ${!showStories ? 'blink-btn' : ''}`} 
+          <button
+            className={`alumni-btn ${!showStories ? 'blink-btn' : ''}`}
             onClick={() => {
               if (!showStories) {
                 setShowStories(true);
@@ -1442,7 +1449,7 @@ const App = () => {
           </button>
         </div>
       </section>
-      
+
 
 
       {/* Success Stories Section [NEW] */}
@@ -1451,7 +1458,7 @@ const App = () => {
           <>
             <div className="success-row reveal active">
               <div className="success-img-box">
-                 <img src="/images/jue-students.jpg" alt="Student Presentation" />
+                <img src="/images/jue-students.jpg" alt="Student Presentation" />
               </div>
               <div className="success-pill">
                 <strong>Kim Seong-min (Athlete)</strong><br />
@@ -1461,7 +1468,7 @@ const App = () => {
 
             <div className="success-row reverse reveal active">
               <div className="success-img-box">
-                 <img src="/images/Undergraduate00.jpg" alt="Student Life" />
+                <img src="/images/Undergraduate00.jpg" alt="Student Life" />
               </div>
               <div className="success-pill">
                 <strong>Garkavenko Hanna (Industry)</strong><br />
@@ -1471,7 +1478,7 @@ const App = () => {
 
             <div className="success-row reveal active">
               <div className="success-img-box">
-                 <img src="/images/fukuokacampus02.jpg" alt="Alumni Founder" />
+                <img src="/images/fukuokacampus02.jpg" alt="Alumni Founder" />
               </div>
               <div className="success-pill">
                 <strong>Kang Rae-soo (CEO)</strong><br />
@@ -1501,9 +1508,9 @@ const App = () => {
         <div className="faq-container-navy">
           <div className="faq-list">
             {faqsList.map((faq, idx) => (
-              <div 
-                key={idx} 
-                className="faq-item-container" 
+              <div
+                key={idx}
+                className="faq-item-container"
                 onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
               >
                 <div className="faq-item">{faq.q}</div>
@@ -1557,10 +1564,18 @@ const App = () => {
           <div className="footer-col">
             <h4>Connect With Us</h4>
             <div className="social-icons">
-              <a href="https://www.jue.ac.jp/facebook/" target="_blank" className="social-icon">FB</a>
-              <a href="https://www.jue.ac.jp/twitter/" target="_blank" className="social-icon">TW</a>
-              <a href="https://www.jue.ac.jp/line/" target="_blank" className="social-icon">LN</a>
-              <a href="https://www.jue.ac.jp/instagram/" target="_blank" className="social-icon">IG</a>
+              <a href="https://www.jue.ac.jp/facebook/" target="_blank" className="social-icon">
+                <img src={fbLogo} alt="Facebook" />
+              </a>
+              <a href="https://www.jue.ac.jp/instagram/" target="_blank" className="social-icon">
+                <img src={igLogo} alt="Instagram" />
+              </a>
+              <a href="https://youtube.com/@nihonkeizaidaigaku?si=vMhfU4ZPgmoINR9V" target="_blank" className="social-icon">
+                <img src={ytLogo} alt="YouTube" />
+              </a>
+              <a href="https://www.linkedin.com/school/japan-university-of-economics/" target="_blank" className="social-icon">
+                <img src={liLogo} alt="LinkedIn" />
+              </a>
             </div>
             <p style={{ fontSize: '0.8rem', marginTop: '20px', opacity: 0.6 }}>
               Institutional Knowledge Base for Global Students.
