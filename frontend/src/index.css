@@ -5922,3 +5922,229 @@ h3 {
     font-size: 0.75rem !important;
   }
 }
+
+/* Higher top spacing for alumni banner */
+.alumni-banner {
+  padding-top: 25px !important;
+}
+
+@media (max-width: 768px) {
+  .alumni-banner {
+    padding-top: 15px !important;
+  }
+}
+
+/* Tighter bottom for stats strip (Mobile) */
+@media (max-width: 768px) {
+  .institutional-stats-strip {
+    padding-bottom: 2px !important;
+  }
+  .alumni-banner {
+    padding-bottom: 0px !important;
+  }
+}
+
+/* Small gap after the stats strip */
+.institutional-stats-strip {
+  margin-bottom: 0.5cm !important;
+}
+
+/* Balancing bottom space for stats strip (Mobile) */
+@media (max-width: 768px) {
+  .institutional-stats-strip {
+    padding-bottom: 12px !important; /* Slightly more space as requested */
+  }
+}
+
+/* Adding white space above Japan Choice section (Mobile) */
+@media (max-width: 768px) {
+  .japan-choice-section {
+    padding-top: 1cm !important; /* Precision 1cm white space */
+  }
+}
+
+/* Adding white space above Comparison section (Mobile) */
+@media (max-width: 768px) {
+  .comparison-section {
+    padding-top: 1cm !important; /* Precision 1cm white space */
+  }
+}
+
+/* Adding blue vertical spacing above Safe Home section (Mobile) */
+@media (max-width: 768px) {
+  .safe-home-section {
+    padding-top: 1cm !important; /* Precision 1cm blue space */
+  }
+}
+
+/* Adding blue vertical spacing at the end of Safe Home section (Mobile) */
+@media (max-width: 768px) {
+  .safe-home-section {
+    padding-bottom: 1cm !important; /* Precision 1cm blue space at bottom */
+  }
+}
+
+/* Adding blue vertical spacing above Alumni Inspiration section (Mobile) */
+@media (max-width: 768px) {
+  .alumni-inspiration-section {
+    padding-top: 1cm !important; /* Precision 1cm blue space */
+  }
+}
+
+/* Vertical Centering and Spacing for FAQ Header Strip (Mobile) */
+@media (max-width: 768px) {
+  .faq-header-strip {
+    padding: 15px 15px !important; /* Increased for better vertical presence */
+  }
+  .faq-header-strip h2 {
+    margin-bottom: 0 !important; /* Centering text vertically */
+    line-height: 1 !important;
+  }
+}
+
+/* Adding blue vertical spacing above Apply CTA section (Mobile) */
+@media (max-width: 768px) {
+  .apply-cta {
+    padding-top: 1cm !important; /* Precision 1cm blue space */
+  }
+}
+
+/* Refining Success Stories for Perfect Alignment and Square Images */
+.success-row {
+  gap: 0 !important;
+}
+.success-img-box {
+  border-radius: 0 !important; /* Truly square corners as requested */
+  aspect-ratio: 1/1 !important;
+}
+.success-row:not(.reverse) .success-pill {
+  border-radius: 0 100px 100px 0 !important;
+}
+.success-row.reverse .success-pill {
+  border-radius: 100px 0 0 100px !important;
+}
+
+@media (max-width: 768px) {
+  .success-img-box {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .success-pill {
+    min-height: 100px !important;
+  }
+}
+
+/* Strengthening Square Image Logic for Success Stories */
+.success-img-box {
+  width: 240px !important;
+  height: 240px !important;
+  flex: 0 0 240px !important; /* Force fixed square size on desktop */
+  aspect-ratio: 1/1 !important;
+  display: block !important;
+}
+
+.success-row {
+  display: flex !important;
+  align-items: stretch !important;
+  gap: 0 !important;
+}
+
+.success-pill {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 768px) {
+  .success-img-box {
+    width: 100px !important;
+    height: 100px !important;
+    flex: 0 0 100px !important; /* Force fixed square size on mobile */
+  }
+}
+
+/* Ensuring Reverse Row Direction in Mobile for Success Stories */
+@media (max-width: 768px) {
+  .success-row.reverse {
+    flex-direction: row-reverse !important;
+  }
+  .success-row:not(.reverse) {
+    flex-direction: row !important;
+  }
+}
+
+/* Absolute Square Enforcement for Success Story Images (Mobile) */
+@media (max-width: 768px) {
+  .success-img-box {
+    width: 100px !important;
+    height: 100px !important;
+    min-width: 100px !important;
+    min-height: 100px !important;
+    flex: 0 0 100px !important;
+    aspect-ratio: 1/1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+  .success-img-box img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+  }
+  .success-pill {
+    min-height: 100px !important;
+  }
+}
+
+/* Fixing the Right-Side (Reverse) Success Image Square Shape (Mobile) */
+@media (max-width: 768px) {
+  .success-row.reverse .success-img-box {
+    width: 100px !important;
+    height: 100px !important;
+    flex: 0 0 100px !important;
+    border-radius: 0 !important; /* Force square corners */
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Adding space above the first success story (Mobile) */
+@media (max-width: 768px) {
+  .success-stories {
+    padding-top: 1cm !important; /* Precision 1cm whitespace above stories */
+  }
+}
+
+/* Feature: Larger Student Portrait with Centered Text Pill (Mobile) */
+@media (max-width: 768px) {
+  .success-row {
+    align-items: center !important; /* Center the smaller text box against the larger image */
+    min-height: 130px !important;
+  }
+  .success-img-box {
+    width: 120px !important;
+    height: 120px !important;
+    flex: 0 0 120px !important;
+    z-index: 10 !important;
+    border-radius: 4px !important; /* Slight rounding for the 'standalone' look */
+  }
+  .success-pill {
+    height: 90px !important;
+    min-height: 90px !important;
+    margin: 0 !important;
+    z-index: 5 !important;
+    border-radius: 0 50px 50px 0 !important; /* Distinctive pill shape coming out of image */
+  }
+  .success-row.reverse .success-pill {
+    border-radius: 50px 0 0 50px !important;
+  }
+}
+
+/* Adding vertical space above WhatsApp CTA (Mobile) */
+@media (max-width: 768px) {
+  .whatsapp-cta-section {
+    padding-top: 1cm !important; /* Precision 1cm whitespace */
+  }
+}
