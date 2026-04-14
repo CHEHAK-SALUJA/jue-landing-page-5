@@ -1573,7 +1573,7 @@ const App = () => {
               <a href="https://youtube.com/@nihonkeizaidaigaku?si=vMhfU4ZPgmoINR9V" target="_blank" className="social-icon">
                 <img src={ytLogo} alt="YouTube" />
               </a>
-              <a href="https://www.linkedin.com/school/japan-university-of-economics/" target="_blank" className="social-icon">
+              <a href="https://www.linkedin.com/school/%E6%97%A5%E6%9C%AC%E7%B5%8C%E6%B8%88%E5%A4%A7%E5%AD%A6/" target="_blank" className="social-icon">
                 <img src={liLogo} alt="LinkedIn" />
               </a>
             </div>
