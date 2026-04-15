@@ -1087,7 +1087,7 @@ const App = () => {
       {/* Main Navigation Bar [NEW] */}
       <header className="main-nav-bar">
         <div className="nav-container">
-          <div className="nav-logo">JUE</div>
+          <div className="nav-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>JUE</div>
           <nav className="nav-menu desktop-only">
             <a href="#home">HOME</a>
             <a href="#programs">PROGRAMS</a>
@@ -1109,7 +1109,7 @@ const App = () => {
       {/* Mobile Sidebar Navigation */}
       <div className={`mobile-sidebar ${isMenuOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
-           <div className="nav-logo">JUE</div>
+           <div className="nav-logo" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setIsMenuOpen(false); }} style={{ cursor: 'pointer' }}></div>
            <button className="close-menu" onClick={() => setIsMenuOpen(false)}>✕</button>
         </div>
         <nav className="sidebar-links">
