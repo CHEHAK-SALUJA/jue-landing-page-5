@@ -578,6 +578,7 @@ const JapanChoiceCarousel = () => {
 
   return (
     <section
+      id="why-japan-choice"
       className="japan-choice-section reveal"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
@@ -670,6 +671,7 @@ const ExploreJapanCarousel = () => {
 
   return (
     <section
+      id="explore-japan"
       className="japan-choice-section reveal"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
@@ -779,7 +781,7 @@ const WhyChooseSection = () => {
   ];
 
   return (
-    <section className="why-choose-jue reveal">
+    <section id="why-jue" className="why-choose-jue reveal">
       <div className="why-choose-header">
         <h2 className="why-choose-line1">Why Choose</h2>
         <h2 className="why-choose-line2">Japan University of Economics(JUE)</h2>
@@ -1108,12 +1110,18 @@ const App = () => {
         </div>
         <nav className="sidebar-links">
           <a href="#home" onClick={() => setIsMenuOpen(false)}>HOME</a>
-          <a href="#programs" onClick={() => setIsMenuOpen(false)}>PROGRAMS</a>
-          <a href="#journey" onClick={() => setIsMenuOpen(false)}>YOUR JOURNEY FROM INDIA</a>
-          <a href="#special-support2" onClick={() => setIsMenuOpen(false)}>SPECIAL SUPPORT</a>
-          <a href="#campus-life-section" onClick={() => setIsMenuOpen(false)}>CAMPUS LIFE</a>
+          <a href="#programs" onClick={() => setIsMenuOpen(false)}>STUDY & PROGRAMS</a>
+          <a href="#why-jue" onClick={() => setIsMenuOpen(false)}>WHY Japan University of Economics</a>
+          <a href="#why-japan-choice" onClick={() => setIsMenuOpen(false)}>WHY JAPAN IS THE RIGHT CHOICE FOR INDIAN STUDENTS</a>
+          <a href="#explore-japan" onClick={() => setIsMenuOpen(false)} className="sidebar-huh"><span className="huh-blue">HUH?</span> Do you know about this in Japan</a>
+          <a href="#comparison" onClick={() => setIsMenuOpen(false)} className="sidebar-smarter">JUE JAPAN: <span className="smarter-blue">THE SMARTER CHOICE</span></a>
+          <a href="#campus-life-section" onClick={() => setIsMenuOpen(false)}>CAMPUS LIFE & EXPERIENCE</a>
+          <a href="#journey" onClick={() => setIsMenuOpen(false)}>FROM INDIA TO JAPAN – Your “flight is ready”</a>
+          <a href="#special-support2" onClick={() => setIsMenuOpen(false)}>SPECIAL SUPPORT FOR INDIAN STUDENTS – WE’VE GOT YOU</a>
+          <a href="#parents-peace" onClick={() => setIsMenuOpen(false)}>FOR FAMILIES & PARENTS – We understand you</a>
+          <a href="#concerns" onClick={() => setIsMenuOpen(false)}>YOUR CONCERNS – SOLVED</a>
+          <a href="#success" onClick={() => setIsMenuOpen(false)}>INDIAN STUDENT SUCCESS STORIES</a>
           <a href="#faq" onClick={() => setIsMenuOpen(false)}>FAQs</a>
-          <a href="#inquiry" onClick={() => setIsMenuOpen(false)}>CONTACT US</a>
         </nav>
         <div className="sidebar-footer">
           <button className="apply-btn-mobile">APPLY NOW</button>
@@ -1319,7 +1327,7 @@ const App = () => {
       <ExploreJapanCarousel />
 
       {/* Institutional Comparison Table [NEW] */}
-      <section className="comparison-section reveal">
+      <section id="comparison" className="comparison-section reveal">
         <div className="section-container">
           <h2 className="comparison-title">
             <span className="light-blue">Why JUE Japan</span> <br className="mobile-only" /> <span className="navy-blue">is the Smarter Choice</span>
@@ -1506,7 +1514,7 @@ const App = () => {
       </section>
 
       {/* Total Peace of Mind Section [NEW] */}
-      <section className="peace-of-mind reveal">
+      <section id="parents-peace" className="peace-of-mind reveal">
         <div className="section-container-small">
           <div className="peace-header">
             <span className="peace-badge">FOR FAMILIES</span>
@@ -1586,7 +1594,7 @@ const App = () => {
 
 
       {/* Community Row Header [REFINED - RELOCATED] */}
-      <section className="community-cta reveal" style={{ position: 'relative', overflow: 'visible' }}>
+      <section id="concerns" className="community-cta reveal" style={{ position: 'relative', overflow: 'visible' }}>
         <h2 className="community-home-text">
           <span className="white-text">Your concerns</span> <span className="green-highlight">NOW SOLVED</span>
           <span className="animated-emoji"></span>
