@@ -1101,7 +1101,7 @@ const App = () => {
     // Initial timeout to hide button if no scrolling happens on load
     scrollTimeout.current = setTimeout(() => {
       setIsScrolling(false);
-    }, 1000);
+    }, 2000);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -1111,10 +1111,19 @@ const App = () => {
     };
   }, []);
 
+  const handleApplyNow = () => {
+    window.open('https://forms.gle/Ho44EJ3iFKZ5jfA48', '_blank');
+  };
+
   return (
     <div className="app">
       {/* Sticky Apply Button */}
-      <button className={`sticky-apply-btn ${!isScrolling ? 'hidden' : ''}`}>APPLY NOW</button>
+      <button 
+        className={`sticky-apply-btn ${!isScrolling ? 'hidden' : ''}`}
+        onClick={handleApplyNow}
+      >
+        APPLY NOW
+      </button>
 
       {/* Main Navigation Bar [NEW] */}
       <header className="main-nav-bar">
@@ -1160,7 +1169,7 @@ const App = () => {
           <a href="#faq" onClick={() => setIsMenuOpen(false)}>FAQs</a>
         </nav>
         <div className="sidebar-footer">
-          <button className="apply-btn-mobile">APPLY NOW</button>
+          <button className="apply-btn-mobile" onClick={handleApplyNow}>APPLY NOW</button>
         </div>
       </div>
       {isMenuOpen && <div className="menu-overlay" onClick={() => setIsMenuOpen(false)}></div>}
@@ -1200,7 +1209,7 @@ const App = () => {
 
           {/* Bottom badges */}
           <div className="hero-badges">
-            <span className="hero-badge-gold">Avail FREE Counselling</span>
+            <span className="hero-badge-gold" onClick={handleApplyNow} style={{ cursor: 'pointer' }}>Avail FREE Counselling</span>
           </div>
         </div>
       </section>
@@ -1745,7 +1754,7 @@ const App = () => {
       <section className="apply-cta reveal">
         <h2>Ready to Begin Your Journey?</h2>
         <p>Join the next generation of global leaders at Japan University of Economics.</p>
-        <button className="apply-btn">APPLY FOR ADMISSIONS</button>
+        <button className="apply-btn" onClick={handleApplyNow}>APPLY FOR ADMISSIONS</button>
       </section>
 
       {/* Institutional Redesigned Footer [MODIFIED/ENHANCED] */}
