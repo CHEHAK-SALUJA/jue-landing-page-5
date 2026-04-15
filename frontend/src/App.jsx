@@ -4,22 +4,21 @@ import NewsCarousel from './components/NewsCarousel';
 import HighlightsCarousel from './components/HighlightsCarousel';
 import './index.css';
 import namasteIcon from './assets/namaste.png';
-import japan1 from './assets/ai_images_why_japan/japan_1.png';
-import japan2 from './assets/ai_images_why_japan/japan_2.png';
-import japan3 from './assets/ai_images_why_japan/japan_3.png';
-import japan4 from './assets/ai_images_why_japan/japan_4.png';
-import japan5 from './assets/ai_images_why_japan/japan_5.png';
-import japan6 from './assets/ai_images_why_japan/japan_6.png';
-import japan7 from './assets/ai_images_why_japan/japan_7.png';
-import japan8 from './assets/ai_images_why_japan/japan_8.png';
+import japan1 from './assets/why_japan/japan_1.png';
+import japan2 from './assets/why_japan/japan_2.png';
+import japan3 from './assets/why_japan/japan_3.png';
+import japan4 from './assets/why_japan/japan_4.png';
+import japan5 from './assets/why_japan/japan_5.png';
+import japan6 from './assets/why_japan/japan_6.png';
 
 // Explore Japan Images
-import expUrban from './assets/ai_images_explore_japan/urban.png';
-import expFood from './assets/ai_images_explore_japan/food.png';
-import expNature from './assets/ai_images_explore_japan/nature.png';
-import expStudent from './assets/ai_images_explore_japan/student_life.png';
-import expTech from './assets/ai_images_explore_japan/tech.png';
-import expCulture from './assets/ai_images_explore_japan/culture.png';
+import exp1 from './assets/explore_japan/explore_japan_1.png';
+import exp2 from './assets/explore_japan/explore_japan_2.png';
+import exp3 from './assets/explore_japan/explore_japan_3.png';
+import exp4 from './assets/explore_japan/explore_japan_4.png';
+import exp5 from './assets/explore_japan/explore_japan_5.png';
+import exp6 from './assets/explore_japan/explore_japan_6.png';
+import exp7 from './assets/explore_japan/explore_japan_7.png';
 
 // Campus Life Images
 import campus1 from './assets/ai_images_campus_life/campus_1.png';
@@ -521,45 +520,35 @@ const programImages = {
 const JapanChoiceCarousel = () => {
   const images = [
     {
-      title: "World-Class Safety",
-      desc: "Experience one of the safest countries globally, where you can move freely with peace of mind. Japan's low crime rate and secure environment make it perfect for international students.",
+      title: "SAFETY & LOW CRIME RATE",
+      desc: "One of the safest countries in the world. Japan consistently ranks among the safest nations globally, with extremely low crime rates. Even women can walk alone late at night with a strong sense of security.",
       img: japan1
     },
     {
-      title: "Stunning Natural Seasons",
-      desc: "From cherry blossoms in spring to golden leaves in autumn, Japan's four distinct seasons offer breathtaking views and a unique connection to nature throughout the year.",
+      title: "WARM WELCOME FOR INDIANS",
+      desc: "Indians are respected for their skills and culture. Japanese companies value Indian talent for their hard work, English communication, and skills. Many Indians are already building successful careers in Japan.",
       img: japan2
     },
     {
-      title: "Cutting-Edge Technology",
-      desc: "Be at the forefront of global innovation. Study in a nation that leads the world in robotics and high-speed transportation systems like the Shinkansen.",
+      title: "AFFORDABLE QUALITY EDUCATION",
+      desc: "Better ROI compared to Western countries. Study in Japan costs much less than countries like the US/UK, making it a smart choice for Indian families looking for quality education at a reasonable cost.",
       img: japan3
     },
     {
-      title: "Traditional Culture",
-      desc: "Discover a harmonious blend of the old and new. Explore ancient shrines and participate in traditional ceremonies in a culture that deeply respects its rich history.",
+      title: "FOOD & CULTURAL COMFORT",
+      desc: "Indian food and communities are easily available. From Indian restaurants to growing Indian communities, students can enjoy familiar food and celebrate festivals like Diwali even while living in Japan.",
       img: japan4
     },
     {
-      title: "Authentic Culinary Delights",
-      desc: "Enjoy a world-renowned food culture. From high-end sushi to affordable local ramen, Japan's cuisine is as diverse and high-quality as its education system.",
+      title: "JOB SECURITY & STABLE CAREERS",
+      desc: "Long-term employment culture. Japan is known for strong job stability. Unlike many countries, companies rarely fire employees easily and focus on long-term growth, giving Indian professionals a sense of security and peace of mind.",
       img: japan5
     },
     {
-      title: "24/7 Convenience",
-      desc: "Life made easy with convenience stores on every corner and efficient services. Everything you need is accessible anytime, letting you focus on your studies.",
+      title: "HIGH EXPENSES — BUT HIGH VALUE",
+      desc: "Costly lifestyle with strong benefits. Yes, Japan can be expensive but in return you get world-class infrastructure, safety, cleanliness, and services that truly justify the cost.",
       img: japan6
-    },
-    {
-      title: "Leading Education & Research",
-      desc: "Enroll in world-class institutions known for academic rigour. JUE provides the tools and network needed to excel in the global and domestic market.",
-      img: japan7
-    },
-    {
-      title: "Vibrant City Life",
-      desc: "Live in dynamic urban centers like Tokyo or Fukuoka. Enjoy endless entertainment, shopping, and networking opportunities in some of the world's most modern cities.",
-      img: japan8
-    },
+    }
   ];
 
   const [idx, setIdx] = React.useState(0);
@@ -624,34 +613,39 @@ const JapanChoiceCarousel = () => {
 const ExploreJapanCarousel = () => {
   const images = [
     {
-      title: "Electric Evenings",
-      desc: "Dive into the neon-lit energy of Japan''s major cities, where the night brings a futuristic atmosphere and endless discovery.",
-      img: expUrban
+      title: "DISCIPLINE THAT SHOCKS THE WORLD",
+      desc: "In Japan, trains are so punctual that even a delay of a few seconds leads to official apologies. In one case, a train company apologized for just a 35-second delay showing how seriously they value time and responsibility.",
+      img: exp1
     },
     {
-      title: "Gourmet Adventures",
-      desc: "Savor the world''s most refined and diverse food scene. From street-side ramen to premium sushi, every meal is a cultural experience.",
-      img: expFood
+      title: "RESPECT FOR EVERY SMALL THING",
+      desc: "Even something like a drain cover (manhole) is beautifully designed with art and local culture. This reflects a deep mindset. Every work matters and Every role deserves respect. This is something very inspiring for Indian students where dignity of work is truly practiced.",
+      img: exp2
     },
     {
-      title: "Pristine Nature",
-      desc: "Discover the serene beauty of Japan''s seasonal landscapes. Find inspiration in the perfect balance of traditional gardens and majestic mountains.",
-      img: expNature
+      title: "TRADITIONAL TEA CEREMONY",
+      desc: "The Japanese Tea Ceremony is not just about drinking tea; it’s about respect, peace, and mindfulness. Every movement is graceful, teaching patience and inner calm.",
+      img: exp3
     },
     {
-      title: "Global Community",
-      desc: "Join a melting pot of students from across the globe. Our libraries and social spaces are designed to foster international collaboration.",
-      img: expStudent
+      title: "UNIQUE SWEETS & FOOD CULTURE",
+      desc: "Japan is famous for desserts like Mochi soft rice cakes often filled with sweet red bean paste. Even sweets reflect tradition, season, and simplicity.",
+      img: exp4
     },
     {
-      title: "Future-Ready Tech",
-      desc: "Get hands-on with the world''s most advanced technology. Our labs offer students the opportunity to learn in the birthplace of robotics.",
-      img: expTech
+      title: "MOUNT FUJI – A SYMBOL OF LUCK",
+      desc: "Mount Fuji is considered sacred and lucky. There is a belief: If you see Mount Fuji clearly on your journey (especially while returning), it means Japan is calling you back again.",
+      img: exp5
     },
     {
-      title: "Timeless Traditions",
-      desc: "Experience the soul of Japan through ancient tea ceremonies and local festivals that have been preserved for centuries.",
-      img: expCulture
+      title: "CHOCOLATE GIFTING CULTURE",
+      desc: "Giving chocolates is a big tradition—especially on Valentine’s Day and exam times. Students give chocolates as motivation and encouragement—showing care in a simple but meaningful way.",
+      img: exp6
+    },
+    {
+      title: "SHRINES & SPIRITUAL LIFE",
+      desc: "Japanese Shinto Shrines are found everywhere; people visit them to pray, make wishes, and find peace. Even busy people take time to connect spiritually.",
+      img: exp7
     },
   ];
 
