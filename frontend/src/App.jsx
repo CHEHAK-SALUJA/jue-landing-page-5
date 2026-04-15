@@ -21,9 +21,15 @@ import exp6 from './assets/explore_japan/explore_japan_6.png';
 import exp7 from './assets/explore_japan/explore_japan_7.png';
 
 // Campus Life Images
-import campus1 from './assets/ai_images_campus_life/campus_1.png';
-import campus2 from './assets/ai_images_campus_life/campus_2.png';
-import campus3 from './assets/ai_images_campus_life/campus_3.png';
+import cl1 from './assets/campus_highlights/campuslife1.png';
+import cl2 from './assets/campus_highlights/campuslife2.png';
+import cl3 from './assets/campus_highlights/campuslife3.png';
+import cl4 from './assets/campus_highlights/campuslife4.png';
+import cl5 from './assets/campus_highlights/campuslife5.png';
+import cl6 from './assets/campus_highlights/campuslife6.png';
+import cl7 from './assets/campus_highlights/campuslife7.png';
+import cl8 from './assets/campus_highlights/campuslife8.png';
+import cl9 from './assets/campus_highlights/campuslife9.png';
 
 // Social Logos
 import fbLogo from './assets/logos/Facebook_logo.png';
@@ -706,19 +712,49 @@ const ExploreJapanCarousel = () => {
 const CampusLifeCarousel = () => {
   const images = [
     {
-      title: "Collaborative Learning",
-      desc: "Our high-tech library and collaborative spaces are designed for cross-cultural study and group innovation.",
-      img: campus1
+      title: "Smart Learning Classrooms",
+      desc: "Experience high-tech lecture halls equipped with premium presentation and interactive systems for a modern education.",
+      img: cl1
     },
     {
-      title: "Cultural Festivals",
-      desc: "Experience the fusion of Indian and Japanese traditions at our vibrant campus events and festivals.",
-      img: campus2
+      title: "Advanced Research Labs",
+      desc: "Get hands-on with futuristic technology in our specialized robotics and AI laboratories under expert faculty guidance.",
+      img: cl2
     },
     {
-      title: "State-of-the-Art Labs",
-      desc: "Get hands-on with futuristic technology in our robotics and AI laboratories under expert guidance.",
-      img: campus3
+      title: "Digital Design Studio",
+      desc: "Unleash your creativity in our professional media labs, featuring the latest software and hardware for digital innovation.",
+      img: cl3
+    },
+    {
+      title: "Global Student Lounge",
+      desc: "Relax and connect with students from over 20 countries in our vibrant, comfortable social spaces designed for collaboration.",
+      img: cl4
+    },
+    {
+      title: "24/7 Academic Library",
+      desc: "Access thousands of global resources and quiet study zones in our high-density institutional library system.",
+      img: cl5
+    },
+    {
+      title: "Campus Cultural Festivals",
+      desc: "Celebrate the fusion of Indian and Japanese traditions through our lively annual festivals, food fairs, and student events.",
+      img: cl6
+    },
+    {
+      title: "Modern Sports Complex",
+      desc: "Lead a balanced lifestyle with access to our indoor gymnasiums, outdoor courts, and professional sports training facilities.",
+      img: cl7
+    },
+    {
+      title: "Incubation Center",
+      desc: "Bring your business ideas to life with professional mentorship and workspace provided in our campus startup center.",
+      img: cl8
+    },
+    {
+      title: "International Dining Hall",
+      desc: "Enjoy a diverse range of high-quality cuisines, including Indian meals prepared to make you feel right at home.",
+      img: cl9
     }
   ];
 
