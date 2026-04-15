@@ -21,6 +21,11 @@ import expStudent from './assets/ai_images_explore_japan/student_life.png';
 import expTech from './assets/ai_images_explore_japan/tech.png';
 import expCulture from './assets/ai_images_explore_japan/culture.png';
 
+// Campus Life Images
+import campus1 from './assets/ai_images_campus_life/campus_1.png';
+import campus2 from './assets/ai_images_campus_life/campus_2.png';
+import campus3 from './assets/ai_images_campus_life/campus_3.png';
+
 // Social Logos
 import fbLogo from './assets/logos/Facebook_logo.png';
 import igLogo from './assets/logos/Instagram_logo.png';
@@ -702,6 +707,73 @@ const ExploreJapanCarousel = () => {
   );
 };
 
+const CampusLifeCarousel = () => {
+  const images = [
+    {
+      title: "Collaborative Learning",
+      desc: "Our high-tech library and collaborative spaces are designed for cross-cultural study and group innovation.",
+      img: campus1
+    },
+    {
+      title: "Cultural Festivals",
+      desc: "Experience the fusion of Indian and Japanese traditions at our vibrant campus events and festivals.",
+      img: campus2
+    },
+    {
+      title: "State-of-the-Art Labs",
+      desc: "Get hands-on with futuristic technology in our robotics and AI laboratories under expert guidance.",
+      img: campus3
+    }
+  ];
+
+  const [idx, setIdx] = React.useState(0);
+  const touchStartX = React.useRef(null);
+
+  const prevSlide = () => setIdx(prev => (prev - 1 + images.length) % images.length);
+  const nextSlide = () => setIdx(prev => (prev + 1) % images.length);
+
+  const handleTouchStart = (e) => touchStartX.current = e.touches[0].clientX;
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    touchStartX.current = null;
+    if (Math.abs(diff) > 50) diff > 0 ? nextSlide() : prevSlide();
+  };
+
+  return (
+    <section
+      className="japan-choice-section reveal active"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      style={{ background: '#fff', padding: '40px 0' }}
+      id="campus-life-section"
+    >
+      <h2 className="japan-choice-title">
+        <span className="light-blue">Explore</span> <br className="mobile-only" /> <span className="navy-blue">Campus Life at JUE</span>
+      </h2>
+      <div className="japan-carousel-container">
+        <div
+          className="japan-carousel-track"
+          style={{ transform: `translateX(calc(-${idx * 80}%))` }}
+        >
+          {images.map((item, i) => (
+            <div
+              key={item.title}
+              className={`japan-carousel-item ${i === idx ? 'curr' : (i < idx ? 'prev' : 'next')}`}
+            >
+              <div className="japan-img-box">
+                <img src={item.img} alt={item.title} />
+              </div>
+              <p className="japan-img-caption">{item.title}</p>
+              <p className="japan-img-desc">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const WhyChooseSection = () => {
   const chooseItems = [
     { title: "Affordable Tuition & Scholarships", img: "/images/why-parents.png" },
@@ -874,6 +946,11 @@ const App = () => {
   const [peaceTab, setPeaceTab] = useState('safety');
   const [selectedProgram, setSelectedProgram] = useState(null);
   const [showStories, setShowStories] = useState(false);
+  const [showCampusLife, setShowCampusLife] = useState(false);
+  const [showMoreHome, setShowMoreHome] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(true);
+  const scrollTimeout = useRef(null);
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
   const [selectedSupport, setSelectedSupport] = useState("visa");
   const [activeSupportSlide, setActiveSupportSlide] = useState(0);
@@ -972,23 +1049,83 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolling(true);
+      
+      // Clear existing timeout
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
+      }
+
+      // Set timeout to hide button after 1 second of inactivity
+      scrollTimeout.current = setTimeout(() => {
+        setIsScrolling(false);
+      }, 1000);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial timeout to hide button if no scrolling happens on load
+    scrollTimeout.current = setTimeout(() => {
+      setIsScrolling(false);
+    }, 1000);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="app">
       {/* Sticky Apply Button */}
-      <button className="sticky-apply-btn">APPLY NOW</button>
+      <button className={`sticky-apply-btn ${!isScrolling ? 'hidden' : ''}`}>APPLY NOW</button>
 
       {/* Main Navigation Bar [NEW] */}
       <header className="main-nav-bar">
         <div className="nav-container">
           <div className="nav-logo">JUE</div>
-          <nav className="nav-menu">
+          <nav className="nav-menu desktop-only">
             <a href="#home">HOME</a>
-            <a href="#admission">ADMISSION</a>
-            <a href="#courses">COURSES</a>
-            <a href="#campus">CAMPUS LIFE</a>
+            <a href="#programs">PROGRAMS</a>
+            <a href="#journey">JOURNEY</a>
+            <a href="#special-support2">SUPPORT</a>
+            <a href="#faq">FAQs</a>
           </nav>
+          <button 
+            className="hamburger-menu mobile-only"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <div className={`bar ${isMenuOpen ? 'active' : ''}`}></div>
+            <div className={`bar ${isMenuOpen ? 'active' : ''}`}></div>
+            <div className={`bar ${isMenuOpen ? 'active' : ''}`}></div>
+          </button>
         </div>
       </header>
+
+      {/* Mobile Sidebar Navigation */}
+      <div className={`mobile-sidebar ${isMenuOpen ? 'open' : ''}`}>
+        <div className="sidebar-header">
+           <div className="nav-logo">JUE</div>
+           <button className="close-menu" onClick={() => setIsMenuOpen(false)}>✕</button>
+        </div>
+        <nav className="sidebar-links">
+          <a href="#home" onClick={() => setIsMenuOpen(false)}>HOME</a>
+          <a href="#programs" onClick={() => setIsMenuOpen(false)}>PROGRAMS</a>
+          <a href="#journey" onClick={() => setIsMenuOpen(false)}>YOUR JOURNEY FROM INDIA</a>
+          <a href="#special-support2" onClick={() => setIsMenuOpen(false)}>SPECIAL SUPPORT</a>
+          <a href="#campus-life-section" onClick={() => setIsMenuOpen(false)}>CAMPUS LIFE</a>
+          <a href="#faq" onClick={() => setIsMenuOpen(false)}>FAQs</a>
+          <a href="#inquiry" onClick={() => setIsMenuOpen(false)}>CONTACT US</a>
+        </nav>
+        <div className="sidebar-footer">
+          <button className="apply-btn-mobile">APPLY NOW</button>
+        </div>
+      </div>
+      {isMenuOpen && <div className="menu-overlay" onClick={() => setIsMenuOpen(false)}></div>}
 
 
       {/* Hero Section */}
@@ -1233,13 +1370,54 @@ const App = () => {
               <span className="check-icon">✓</span>
               <p><strong>Mentor Support System:</strong> Dedicated mentor support to guide students academically and personally throughout their journey.</p>
             </div>
+
+            {!showMoreHome && (
+              <p 
+                onClick={() => setShowMoreHome(true)} 
+                style={{ color: '#3498db', cursor: 'pointer', fontSize: '0.9rem', fontWeight: '600', marginBottom: '15px', marginLeft: '30px' }}
+              >
+                more...
+              </p>
+            )}
+
+            {showMoreHome && (
+              <>
+                <div className="checklist-item">
+                  <span className="check-icon">✓</span>
+                  <p><strong>Career Orientation Support:</strong> Comprehensive guidance on job hunting, resume building, and interview preparation for a successful career in Japan.</p>
+                </div>
+                <div className="checklist-item">
+                  <span className="check-icon">✓</span>
+                  <p><strong>Cultural Integration Programs:</strong> Regular workshops and events to help international students understand and adapt to Japanese lifestyle and customs.</p>
+                </div>
+                <div className="checklist-item">
+                  <span className="check-icon">✓</span>
+                  <p><strong>English Speaking Assistance:</strong> Dedicated desk for English-speaking students to resolve any administrative or daily life queries.</p>
+                </div>
+              </>
+            )}
           </div>
 
 
 
-          <button className="explore-campus-btn">Explore Campus Life</button>
+          <button 
+            className="explore-campus-btn"
+            onClick={() => {
+              setShowCampusLife(!showCampusLife);
+              if (!showCampusLife) {
+                setTimeout(() => {
+                  document.getElementById('campus-life-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+              }
+            }}
+          >
+            {showCampusLife ? 'Hide Campus Life' : 'Explore Campus Life'}
+          </button>
         </div>
       </section>
+
+      {/* Conditionally reveal Campus Life Section [NEW] */}
+      {showCampusLife && <CampusLifeCarousel />}
 
       {/* News & Press Release — Swipe Carousel */}
       <section className="news-press-section reveal">
