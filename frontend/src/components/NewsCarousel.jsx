@@ -1,19 +1,49 @@
 import { useRef, useEffect, useState } from 'react';
 
-import news1 from '../assets/ai_images/news_1.png';
-import news2 from '../assets/ai_images/news_2.png';
-import news3 from '../assets/ai_images/news_3.png';
-import news4 from '../assets/ai_images/news_4.png';
-import news5 from '../assets/ai_images/news_5.png';
-import news6 from '../assets/ai_images/news_6.png';
+import news1 from '../assets/news/news_1.png';
+import news2 from '../assets/news/news_2.png';
+import news3 from '../assets/news/news_3.png';
+import news4 from '../assets/news/news_4.png';
+import news5 from '../assets/news/news5.png';
+import news6 from '../assets/news/news_6.png';
 
 const defaultNews = [
-  { img: news1, date: '2026.04.15', text: 'Our university has received the "2026 Prime Minister\'s Commendation for Distinguished Service in the Promotion of Greenery."' },
-  { img: news2, date: '2026.04.10', text: 'JUE Students Win National Research Award for Digital Transformation in modern Economics Education.' },
-  { img: news3, date: '2026.04.05', text: 'JUE Announces New Academic Partnership with Top Indian Institutions for Global Exchange Programs.' },
-  { img: news4, date: '2026.03.28', text: 'Record number of students graduate at the Spring 2026 Convocation Ceremony held at Tokyo Campus.' },
-  { img: news5, date: '2026.03.20', text: 'International Exchange Program welcomes 120 students from 18 nations for the Spring Semester 2026.' },
-  { img: news6, date: '2026.03.15', text: 'Distinguished Professor Yamamoto delivers keynote at Global Economics Forum attended by 500+ students.' },
+  { 
+    img: news1, 
+    title: 'Gateway to Japan: SRM AP Signs MoU with JUE',
+    text: 'Expanding academic excellence and global career pathways. Initiative supports “Destination Japan” with direct access to education and employment in Japan.',
+    url: 'https://www.srmap.edu.in/news/srm-ap-strengthens-ties-with-japan-university-of-economics/'
+  },
+  { 
+    img: news2, 
+    title: 'JUE Blends Tradition & Innovation to Shape Global Leaders',
+    text: '50+ years of excellence in business and economics education. Empowering international students with skills for global careers in Japan.',
+    url: 'https://www.theworldfolio.com/news/tradition-and-modernity-how-japan-university-of-economics-shapes-tomorrows-global-leaders/5076/'
+  },
+  { 
+    img: news3, 
+    title: 'JUE’s My Campus Site Earns Studio Design Award 2025 Nomination',
+    text: 'Recognized for outstanding design and user experience. Invites global audience support through public voting.',
+    url: 'https://mycampus.jue.ac.jp/news'
+  },
+  { 
+    img: news4, 
+    title: 'JUE Leads the Way in Global Education & Career Success',
+    text: '97% placement rate for international graduates with Japanese language & cultural training. Bridging cultures while preparing students for Japan’s workforce.',
+    url: 'https://www.theworldfolio.com/interviews/japan-university-of-economics-nurturing-global-talent-and-bridging-cultures/6758/'
+  },
+  { 
+    img: news5, 
+    title: 'Japan University of Economics Wins 2026 Prime Minister’s Commendation',
+    text: 'Awarded for leadership in environmental conservation and green initiatives. Recognized nationally for sustainability and community impact.',
+    url: 'https://www.jue.ac.jp/information/green-award2026/'
+  },
+  { 
+    img: news6, 
+    title: 'JUE Begins Academic Year 2026 with Grand Entrance Ceremony',
+    text: 'Students from 25+ countries join a diverse global campus. Encouraging growth through education, culture, and real-world skills.',
+    url: 'https://www.jue.ac.jp/information/260413_entrance-ceremony_fukuoka/'
+  },
 ];
 
 export default function NewsCarousel({ title = 'News & Press Release', items = defaultNews }) {
@@ -141,13 +171,15 @@ export default function NewsCarousel({ title = 'News & Press Release', items = d
         onTouchEnd={onMobileTouchEnd}
       >
          <div className={`news-main-card news-card ${isSliding ? `sliding-${slideDirection}` : ''}`}>
-            <div className="news-card__image main-img">
-              <img src={items[activeIndex].img} alt="Main news" />
-            </div>
-            <div className="news-card__body">
-               <p className="news-card__date">{items[activeIndex].date}</p>
-               <p className="news-card__text">{items[activeIndex].text}</p>
-            </div>
+            <a href={items[activeIndex].url} target="_blank" rel="noopener noreferrer" className="news-card-link">
+              <div className="news-card__image main-img">
+                <img src={items[activeIndex].img} alt="Main news" />
+              </div>
+              <div className="news-card__body">
+                 <h3 className="news-card__title">{items[activeIndex].title}</h3>
+                 <p className="news-card__text">{items[activeIndex].text}</p>
+              </div>
+            </a>
          </div>
          <div className="news-sidebar">
             <div className="news-sidebar-track">
@@ -161,7 +193,7 @@ export default function NewsCarousel({ title = 'News & Press Release', items = d
                      <img src={item.img} alt="Side news" />
                   </div>
                   <div className="news-card__body-mini">
-                     <p className="news-card__date-mini">{item.date}</p>
+                     <h4 className="news-card__title-mini">{item.title}</h4>
                      <p className="news-card__text-mini">{item.text}</p>
                   </div>
                 </div>
@@ -180,13 +212,15 @@ export default function NewsCarousel({ title = 'News & Press Release', items = d
       >
         {infiniteItems.map((item, i) => (
           <div className="news-snap-card news-card" key={i}>
-            <div className="news-card__image">
-              <img src={item.img} alt={`card ${i + 1}`} draggable={false} />
-            </div>
-            <div className="news-card__body">
-              <p className="news-card__date">{item.date}</p>
-              <p className="news-card__text">{item.text}</p>
-            </div>
+            <a href={item.url} target="_blank" rel="noopener noreferrer" className="news-card-link">
+              <div className="news-card__image">
+                <img src={item.img} alt={`card ${i + 1}`} draggable={false} />
+              </div>
+              <div className="news-card__body">
+                <h3 className="news-card__title">{item.title}</h3>
+                <p className="news-card__text">{item.text}</p>
+              </div>
+            </a>
           </div>
         ))}
       </div>
