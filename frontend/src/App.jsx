@@ -712,48 +712,48 @@ const ExploreJapanCarousel = () => {
 const CampusLifeCarousel = () => {
   const images = [
     {
-      title: "Smart Learning Classrooms",
-      desc: "Experience high-tech lecture halls equipped with premium presentation and interactive systems for a modern education.",
+      title: "Student cafeteria “Cafeteria Rose” RESTAURANT & CAFE",
+      desc: "A modern, stylish, and spacious cafeteria where students can relax and enjoy high-quality meals prepared by a professional chef. With 20+ varieties of freshly baked breads, pastries, and bento boxes, it offers the perfect mix of taste, quality, and variety. More than just food, it’s a space to relax, connect, and enjoy campus life.",
       img: cl1
     },
     {
-      title: "Advanced Research Labs",
-      desc: "Get hands-on with futuristic technology in our specialized robotics and AI laboratories under expert faculty guidance.",
+      title: "Natural hot spring open-air bath (Relax, refresh, and rejuvenate)",
+      desc: "Girls’ dormitory is equipped with a private open-air natural hot spring bath, offering a unique and premium living experience on campus.",
       img: cl2
     },
     {
-      title: "Digital Design Studio",
-      desc: "Unleash your creativity in our professional media labs, featuring the latest software and hardware for digital innovation.",
+      title: "INTERNATIONAL EXCHANGE LOUNGE",
+      desc: "The International Exchange Lounge serves as a central space for students to gather, interact, and stay informed. Important updates such as seminars, events, and class announcements are regularly displayed on the bulletin board, making it a key communication hub on campus.",
       img: cl3
     },
     {
-      title: "Global Student Lounge",
-      desc: "Relax and connect with students from over 20 countries in our vibrant, comfortable social spaces designed for collaboration.",
+      title: "LIBRARY & INFORMATION CENTER",
+      desc: "The Library and Information Center offers a wide collection of specialized and practical books in economics and business management, supporting both academic and career development.",
       img: cl4
     },
     {
-      title: "24/7 Academic Library",
-      desc: "Access thousands of global resources and quiet study zones in our high-density institutional library system.",
+      title: "POWDER ROOM",
+      desc: "Freshen up anytime. Clean and well-maintained spaces for students to refresh and feel confident throughout the day. Designed for comfort and convenience on campus.",
       img: cl5
     },
     {
-      title: "Campus Cultural Festivals",
-      desc: "Celebrate the fusion of Indian and Japanese traditions through our lively annual festivals, food fairs, and student events.",
+      title: "DANCE STUDIO",
+      desc: "Express, practice, and perform. A dedicated space for students to practice dance, stay active, and explore their creativity. A vibrant space for passion, energy, and expression.",
       img: cl6
     },
     {
-      title: "Modern Sports Complex",
-      desc: "Lead a balanced lifestyle with access to our indoor gymnasiums, outdoor courts, and professional sports training facilities.",
+      title: "BOYS’ DORMITORY – CAMBRIDGE HOUSE",
+      desc: "A modern, hotel-like dormitory offering private studio-style rooms with excellent comfort and privacy. Facilities include karaoke, billiards, lounge, large public bath, dining hall, laundry, shop, and tea room, creating a lively and convenient living environment. perfect balance of independence, comfort, and international student interaction.",
       img: cl7
     },
     {
-      title: "Incubation Center",
-      desc: "Bring your business ideas to life with professional mentorship and workspace provided in our campus startup center.",
+      title: "CLUB ACTIVITIES",
+      desc: "Learn, play, and grow. Wide range of sports and cultural clubs with top facilities. Build skills, friendships, and a balanced student life.",
       img: cl8
     },
     {
-      title: "International Dining Hall",
-      desc: "Enjoy a diverse range of high-quality cuisines, including Indian meals prepared to make you feel right at home.",
+      title: "CULTURAL CLUBS",
+      desc: "Explore creativity and culture. Join clubs like Music, Cinema, Anime, Dance, and International Volunteer. Express yourself and connect with like-minded students.",
       img: cl9
     }
   ];
